@@ -1,0 +1,73 @@
+{
+  "name": "nine-mens-morris",
+  "version": "1.0.0",
+  "description": "A browser implementation of the game Nine Mens Morris for the IT-talents.de code competition Oct 2017 in Cooperation with adesso AG",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --open",
+    "buildprod": "better-npm-run build:prod",
+    "train": "babel-node --presets=env src/train.temporal.js",
+    "serve": "better-npm-run serve:app"
+  },
+  "betterScripts": {
+    "build:prod": {
+      "command": "echo \"Running build, this may take a while...\" && webpack --progress --colors",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    "serve:app": {
+      "command": "pm2 start process.json --no-daemon",
+      "env": {
+        "PM2_SERVE_PORT": "8099"
+      }
+    }
+  },
+  "keywords": [
+    "nine",
+    "mens",
+    "morris"
+  ],
+  "author": "Benedikt Christoph Wolters",
+  "license": "MIT",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-runtime": "^6.26.0",
+    "better-npm-run": "^0.1.0",
+    "compass": "^0.1.1",
+    "compass-mixins": "^0.12.10",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "fabric-webpack": "^1.6.0-rc.1",
+    "font-awesome": "^4.7.0",
+    "pm2": "^2.10.1",
+    "synaptic": "^1.1.4",
+    "task.js": "0.0.24",
+    "uglifyjs-webpack-plugin": "^1.2.4",
+    "vue": "^2.5.16",
+    "vue-loader": "^13.7.1",
+    "vue-spinner": "^1.0.3",
+    "vue-template-compiler": "^2.5.16",
+    "webpack-dev-server": "^2.11.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "bulma": "^0.6.2",
+    "clean-webpack-plugin": "^0.1.19",
+    "command-line-args": "^4.0.7",
+    "favicons-webpack-plugin": "0.0.7",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^2.30.1",
+    "json-loader": "^0.5.7",
+    "mocha": "^4.1.0",
+    "node-sass": "^4.8.2",
+    "sass-loader": "^6.0.7",
+    "webpack": "^3.11.0"
+  }
+}

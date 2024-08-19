@@ -1,0 +1,6 @@
+node_modules
+_*
+*.log
+dist
+assets/neural_nets/nn_singleiteration_new
+assets/neural_nets/nn_singleiteration_notake_reward_new
